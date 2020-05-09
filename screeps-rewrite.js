@@ -12,8 +12,8 @@ function assessNeed(room)
 	{
 		console.log('Derelict ' + derelicts[0].structureType + ' found!");
 		// assign work
-??		derelicts.forEach(markTargets);
-??		room.find(FIND_MY_CREEPS,
+		derelicts.forEach(markTargets);
+		room.find(FIND_MY_CREEPS,
 		{
 			filter: (creep) =>
 			((creep.memory.role == 'builder') && (creep.memory.action == 'idle'))
