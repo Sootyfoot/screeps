@@ -1,0 +1,36 @@
+Room reqs
+
+Energy harvesting
+	Determine harvester need
+	Spawn and/or assign harvester
+Energy collection
+	Determine porter need
+	Spawn and/or assign porter
+Energy distribution
+Construction/repair/destruction
+	Determine "standard" needs (container per source, extensions, etc)
+	Spawn and/or assign grunts
+Controller upgrading
+	Determine need
+Creep cleanup (end-of-life recycling, tombstones, dropped resources)
+Defense
+Resource harvesting
+Resource collection
+
+Peon (harvester/porter/upgrader) [WORK,CARRY,MOVE] Bootstrap mode (<=300)
+Harvester [WORK,WORK,WORK,WORK,WORK,MOVE] (>=550)
+Porter [CARRY,CARRY,MOVE] 0:2:1
+Builder [WORK,CARRY,MOVE] 1:1:1
+Upgrader [WORK,CARRY,MOVE] 1:1:1
+
+Ratio of 1:1:1 is fatigue 0 on roads, but off roads, fatigue = x, where x = total WORK parts and non-empty CARRY parts
+
+Maintain controller level
+Perform critical repairs (<x% threshold)
+Recover dropped resources & tombstone contents
+Build essential structures (containers, extensions, towers, storage, spawns)
+Build/dismantle other structures (roads, ramparts, walls, etc)
+Upgrade & perform general repairs
+
+Game.creeps.<creepname>.transfer(Game.creeps.<creepname>.room.storage, RESOURCE_ENERGY)
+Game.spawns.<spawnname>.recycleCreep(Game.creeps.<creepname>)
