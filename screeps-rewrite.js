@@ -1,14 +1,16 @@
 function towerBehavior ()
 {
 	let myTowers = _.filter(Game.structures, (structure) => structure.structureType == STRUCTURE_TOWER);
-	for(let i in myTowers) {
-        //console.log(myTowers[i]);
-        let hostile = myTowers[i].pos.findClosestByRange(FIND_HOSTILE_CREEPS);
-        // console.log(hostile);
-        if (hostile != null) {
-            myTowers[i].attack(hostile);
-            console.log('ATTACKING' + hostile + '@ (' + hostile.pos.x + ',' + hostile.pos.y + ').');
-        }
+	for(let i in myTowers)
+	{
+		//console.log(myTowers[i]);
+		let hostile = myTowers[i].pos.findClosestByRange(FIND_HOSTILE_CREEPS);
+		// console.log(hostile);
+		if (hostile != null)
+		{
+			myTowers[i].attack(hostile);
+			console.log('ATTACKING' + hostile + '@ (' + hostile.pos.x + ',' + hostile.pos.y + ').');
+		}
 	}
 }
 
@@ -66,7 +68,6 @@ function assessNeed(room)
 						console.log('Construction site found!');
 						// assign work
 					}
-
 					const dismantleFlags = room.find(FIND_FLAGS,
 					{
 						filter: (flag) =>
