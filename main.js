@@ -1,5 +1,4 @@
-var emperor = require('emperor');
-
+var emperor = require('actor.emperor');
 
 module.exports.loop = function ()
 {
