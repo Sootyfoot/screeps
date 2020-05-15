@@ -1,4 +1,5 @@
-var varname = require('');
+var emperor = require('emperor');
+
 
 module.exports.loop = function ()
 {
