@@ -1,1 +1,4 @@
-
+/*
+The vizier will be in charge of all metrics for the empire. The emperor will consult the vizier for empire info.
+The vizier will also communicate with governors about their neighbors.
+*/
