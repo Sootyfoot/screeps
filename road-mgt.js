@@ -11,7 +11,7 @@ function (loc)
 function (roadFlagArray)
 {
   roadFlagArray.forEach(
-    roadFlagArray[i].memory.countdown -=;
+    roadFlagArray[i].memory.countdown -= roadFlagArray[i].memory.countdown;
     if (roadFlagArray[i].memory.countdown <= 0)
     {
       // remove flag
